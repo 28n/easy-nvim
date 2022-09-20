@@ -9,4 +9,10 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   -- let packer manage itself
   use 'wbthomason/packer.nvim'
+
+  -- color theme
+  use {
+    'svrana/neosolarized.nvim',
+    requires = { 'tjdevries/colorbuddy.nvim' }
+  }
 end)

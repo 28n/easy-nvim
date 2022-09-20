@@ -61,4 +61,13 @@ packer.startup(function(use)
   
   -- LSP User Interface
   use 'glepnir/lspsaga.nvim'
+  
+  -- Snippets for LUA
+  use 'L3MON4D3/LuaSnip'
+
+  -- Syntax highlighting
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = function() require('nvim-treesitter.install').update({with_sync = true}) end,
+  }
 end)

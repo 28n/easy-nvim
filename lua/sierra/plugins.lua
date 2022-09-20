@@ -78,4 +78,7 @@ packer.startup(function(use)
   -- Automation
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
+  
+  -- Color highlighting
+  use 'norcalli/nvim-colorizer.lua'
 end)

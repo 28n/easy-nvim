@@ -54,4 +54,8 @@ packer.startup(function(use)
   
   -- Prettier plugins for Neovims LSP
   use 'MunifTanjim/prettier.nvim'
+  
+  -- Neovim Package Manager
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
 end)

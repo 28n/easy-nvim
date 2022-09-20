@@ -81,4 +81,7 @@ packer.startup(function(use)
   
   -- Color highlighting
   use 'norcalli/nvim-colorizer.lua'
+  
+  -- Zen Mode
+  use 'folke/zen-mode.nvim'
 end)

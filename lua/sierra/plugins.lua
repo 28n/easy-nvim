@@ -18,4 +18,7 @@ packer.startup(function(use)
 
   -- Statusline
   use 'nvim-lualine/lualine.nvim'
+
+  -- Common utilities
+  use 'nvim-lua/plenary.nvim'
 end)

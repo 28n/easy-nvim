@@ -84,4 +84,7 @@ packer.startup(function(use)
   
   -- Zen Mode
   use 'folke/zen-mode.nvim'
+  
+  -- Bufferline
+  use 'akinsho/nvim-bufferline.lua'
 end)

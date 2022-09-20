@@ -21,4 +21,7 @@ packer.startup(function(use)
 
   -- Common utilities
   use 'nvim-lua/plenary.nvim'
+
+  -- VSCode-lie pictograms
+  use 'onsails/lspkind-nvim'
 end)

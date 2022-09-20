@@ -74,4 +74,8 @@ packer.startup(function(use)
   -- File Browser
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
+  
+  -- Automation
+  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-ts-autotag'
 end)

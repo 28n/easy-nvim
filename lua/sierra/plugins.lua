@@ -51,4 +51,7 @@ packer.startup(function(use)
       "MunifTanjim/nui.nvim",
     }
   }
+  
+  -- Prettier plugins for Neovims LSP
+  use 'MunifTanjim/prettier.nvim'
 end)

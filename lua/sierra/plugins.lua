@@ -87,4 +87,8 @@ packer.startup(function(use)
   
   -- Bufferline
   use 'akinsho/nvim-bufferline.lua'
+  
+  -- GIT Integration
+  use 'lewis6991/gitsigns.nvim'
+  use 'dinhhuy258/git.nvim'
 end)

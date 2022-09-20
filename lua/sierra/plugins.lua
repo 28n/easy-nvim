@@ -33,4 +33,10 @@ packer.startup(function(use)
 
   -- NVIM-Completion
   use 'hrsh7th/nvim-cmp'
+
+  -- LSP
+  use 'neovim/nvim-lspconfig'
+
+  -- NULL-LS
+  use 'jose-elias-alvarez/null-ls.nvim'
 end)

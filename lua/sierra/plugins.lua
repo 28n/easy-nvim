@@ -9,4 +9,4 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   -- let packer manage itself
   use 'wbthomason/packer.nvim'
-  )
+end)

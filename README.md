@@ -6,7 +6,7 @@ So, you are tired of your old code editor and see some cool Youtube videos about
 
 Before you can clone this repo to your machine, you'll need to install a dependency.
 
-Install (Packer.nvim)[https://github.com/wbthomason/packer.nvim] by running this command:
+Install [Packer.nvim](https://github.com/wbthomason/packer.nvim) by running this command:
 
 Unix and Unix-like systems
 ```

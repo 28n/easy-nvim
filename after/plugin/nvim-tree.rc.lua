@@ -71,7 +71,7 @@ local config = {
                 { key = "L", action = "vsplit_preview", action_cb = vsplit_preview },
                 { key = "h", action = "close_node" },
                 { key = "H", action = "collapse_all", action_cb = collapse_all },
-        { key="ga", action = "git_add", action_cb = git_add }
+                { key="ga", action = "git_add", action_cb = git_add }
             }
         },
     },

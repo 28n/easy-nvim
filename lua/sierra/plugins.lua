@@ -98,4 +98,7 @@ packer.startup(function(use)
   -- GIT Integration
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim'
+  
+  use 'github/copilot.vim'
+  
 end)

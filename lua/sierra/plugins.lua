@@ -106,4 +106,6 @@ packer.startup(function(use)
   use 'folke/trouble.nvim'
   
   use 'stevearc/aerial.nvim'
+  
+  use 'numToStr/Comment.nvim'
 end)

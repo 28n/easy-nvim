@@ -1,7 +1,3 @@
-# This is the dev branch
-
-You are currently viewing the Development branch of this project. Please only use this branch if you know what you are doing. You can read the commits and see if there are breaking changes. DONT USE FOR CODE EDITING. This branch may break your code.
-
 # easy-nvim
 
 So, you are tired of your old code editor and see some cool Youtube videos about Neovim? You want to start using it but don't know how? Fear not, an easy nvim-config is on its way!

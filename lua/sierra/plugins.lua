@@ -99,6 +99,7 @@ packer.startup(function(use)
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim'
   
+  --TODO: Add docs for plugins
   use 'github/copilot.vim'
   
   use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
@@ -108,4 +109,9 @@ packer.startup(function(use)
   use 'stevearc/aerial.nvim'
   
   use 'numToStr/Comment.nvim'
+  
+  use {
+    'folke/todo-comments.nvim',
+    requires = 'nvim-lua/plenary.nvim'
+  }
 end)

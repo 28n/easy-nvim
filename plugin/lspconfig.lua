@@ -114,6 +114,51 @@ nvim_lsp.emmet_ls.setup({
     }
 })
 
+nvim_lsp.vuels.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  -- cmd = { "vls" },
+  filetypes = { "vue" },
+  init_options = {
+  config = {
+    css = {},
+    emmet = {},
+    html = {
+      suggest = {}
+    },
+    javascript = {
+      format = {}
+    },
+    stylusSupremacy = {},
+    typescript = {
+      format = {}
+    },
+    vetur = {
+      completion = {
+        autoImport = false,
+        tagCasing = "kebab",
+        useScaffoldSnippets = false
+      },
+      format = {
+        defaultFormatter = {
+          js = "none",
+          ts = "none"
+        },
+        defaultFormatterOptions = {},
+        scriptInitialIndent = false,
+        styleInitialIndent = false
+      },
+      useWorkspaceDependencies = false,
+      validation = {
+        script = true,
+        style = true,
+        template = true
+      }
+    }
+  }
+}
+}
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = true,

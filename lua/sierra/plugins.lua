@@ -116,4 +116,6 @@ packer.startup(function(use)
   }
   
   use 'xiyaowong/nvim-transparent'
+  
+  use 'stevearc/dressing.nvim'
 end)

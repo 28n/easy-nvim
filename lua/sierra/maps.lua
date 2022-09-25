@@ -35,4 +35,4 @@ keymap.set('n', '<C-w><up>', '<C-w>+')
 keymap.set('n', '<C-w><down>', '<C-w>-')
 
 -- Trouble
-keymap.set('n', 'tt', ':Trouble<Return>', {silent = true})
+keymap.set('n', '<Space>t', ':Trouble<Return>', {silent = true})

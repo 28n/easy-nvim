@@ -72,6 +72,14 @@ nvim_lsp.tsserver.setup {
   --cmd = { "typescript-language-server", "--stdio" },
 }
 
+nvim_lsp.graphql.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "graphql", "typescriptreact", "javascriptreact" },
+  cmd = { "graphql-lsp", "server", "-m", "stream" },
+  root_dir = nvim_lsp.util.root_pattern("package.json", ".git"),
+}
+
 nvim_lsp.sourcekit.setup {
   on_attach = on_attach,
 }

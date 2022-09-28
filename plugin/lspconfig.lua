@@ -80,6 +80,20 @@ nvim_lsp.graphql.setup {
   root_dir = nvim_lsp.util.root_pattern("package.json", ".git"),
 }
 
+nvim_lsp.prismals.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "prisma" },
+  -- cmd = { "prisma-language-server", "--stdio" },
+  -- cmd = { "prisma-language-server", "--stdio" },
+  root_dir = nvim_lsp.util.root_pattern("package.json", ".git"),
+  settings = {
+  prisma = {
+    prismaFmtBinPath = ""
+  }
+}
+}
+
 nvim_lsp.sourcekit.setup {
   on_attach = on_attach,
 }

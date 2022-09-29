@@ -79,8 +79,8 @@ packer.startup(function(use)
   }
 
   -- File Browser
-  use {'nvim-telescope/telescope.nvim', cmd = 'Telescope'}
-  use {'nvim-telescope/telescope-file-browser.nvim', cmd = 'Telescope'}
+  use {'nvim-telescope/telescope.nvim'}
+  use {'nvim-telescope/telescope-file-browser.nvim'}
   
   -- Automation
   use 'windwp/nvim-autopairs'
@@ -120,4 +120,6 @@ packer.startup(function(use)
   use 'stevearc/dressing.nvim'
   
   use 'dstein64/vim-startuptime'
+
+  use 'folke/which-key.nvim'
 end)

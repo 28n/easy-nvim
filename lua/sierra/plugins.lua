@@ -79,8 +79,8 @@ packer.startup(function(use)
   }
 
   -- File Browser
-  use 'nvim-telescope/telescope.nvim'
-  use 'nvim-telescope/telescope-file-browser.nvim'
+  use {'nvim-telescope/telescope.nvim', cmd = 'Telescope'}
+  use {'nvim-telescope/telescope-file-browser.nvim', cmd = 'Telescope'}
   
   -- Automation
   use 'windwp/nvim-autopairs'

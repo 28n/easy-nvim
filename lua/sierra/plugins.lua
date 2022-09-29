@@ -118,4 +118,6 @@ packer.startup(function(use)
   use 'xiyaowong/nvim-transparent'
   
   use 'stevearc/dressing.nvim'
+  
+  use 'dstein64/vim-startuptime'
 end)

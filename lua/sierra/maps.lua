@@ -42,6 +42,7 @@ keymap.set('n', '<Space>t', ':Trouble<Return>', silent)
 -- Save buffer
 keymap.set('i', '<C-s>', '<Esc>:w<Return>a', silent)
 keymap.set('n', '<Space>w', ':w<Return>', silent)
+keymap.set('n', '<Space>W', ':wa<Return>', silent)
 
 -- Quit, close, etc.
 keymap.set('n', '<Space>q', ':q<Return>', silent)

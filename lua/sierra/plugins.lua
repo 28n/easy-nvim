@@ -124,4 +124,6 @@ packer.startup(function(use)
   use 'folke/which-key.nvim'
   
   use 'rktjmp/lush.nvim'
+  
+  use 'kartikp10/noctis.nvim'
 end)

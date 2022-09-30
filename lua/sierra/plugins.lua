@@ -122,4 +122,6 @@ packer.startup(function(use)
   use 'dstein64/vim-startuptime'
 
   use 'folke/which-key.nvim'
+  
+  use 'rktjmp/lush.nvim'
 end)

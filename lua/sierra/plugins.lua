@@ -126,4 +126,12 @@ packer.startup(function(use)
   use 'rktjmp/lush.nvim'
   
   use 'kartikp10/noctis.nvim'
+
+  use {
+    'nvim-neorg/neorg',
+    requires = 'nvim-lua/plenary.nvim',
+    ft = 'norg',
+    after = 'nvim-treesitter',
+    run = ":Neorg sync-parsers",
+  }
 end)

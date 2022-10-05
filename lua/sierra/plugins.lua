@@ -166,4 +166,14 @@ packer.startup(function(use)
   use {
     'sindrets/diffview.nvim'
   }
+  use {
+    'folke/noice.nvim',
+    -- event = 'VimEnter',
+
+    requires = {
+    -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+    "MunifTanjim/nui.nvim",
+    "rcarriga/nvim-notify",
+    }
+  }
 end)

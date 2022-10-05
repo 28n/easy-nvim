@@ -78,6 +78,8 @@ vim.cmd([[
   xnoremap # :<C-u>call g:VSetSearch('?')<CR>?<C-R>=@/<CR><CR>
 ]])
 
+vim.cmd([[nnoremap <silent> \ :Neotree reveal<cr>]])
+
 local leader = {
   ["w"] = {
     name = "+windows",

@@ -26,13 +26,14 @@ packer.startup(function(use)
   -- VSCode-lie pictograms
   use 'onsails/lspkind-nvim'
 
+  use 'hrsh7th/cmp-nvim-lsp'
+
   -- NVIM-Completion
   use {
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
     module = 'cmp',
     requires = {
-    { "hrsh7th/cmp-nvim-lsp", module = "cmp_nvim_lsp" },
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-emoji",
     "hrsh7th/cmp-cmdline",
@@ -139,6 +140,8 @@ packer.startup(function(use)
 
   use 'folke/which-key.nvim'
   
+  use({ "famiu/bufdelete.nvim", cmd = "Bdelete" })
+
   use 'rktjmp/lush.nvim'
   
   use 'kartikp10/noctis.nvim'

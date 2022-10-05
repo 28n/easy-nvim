@@ -55,9 +55,9 @@ protocol.CompletionItemKind = {
 }
 
 -- Set up completion using nvim_cmp with LSP source
-local capabilities = require('cmp_nvim_lsp').update_capabilities(
-  vim.lsp.protocol.make_client_capabilities()
-)
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 nvim_lsp.flow.setup {

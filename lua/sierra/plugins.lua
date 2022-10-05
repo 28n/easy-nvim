@@ -104,7 +104,6 @@ packer.startup(function(use)
   -- use 'norcalli/nvim-colorizer.lua'
   use {
     'NvChad/nvim-colorizer.lua',
-    event = "BufReadPre"
   }
   -- Zen Mode
   

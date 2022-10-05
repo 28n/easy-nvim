@@ -1,5 +1,5 @@
 local status, colorizer = pcall(require, "colorizer")
-if (not status) then return end
+if (not status) then print("error colorizer") return end
 
 colorizer.setup({
       user_default_options = {
@@ -21,4 +21,4 @@ colorizer.setup({
 
 vim.cmd(
       [[autocmd ColorScheme * lua package.loaded['colorizer'] = nil; require('colorizer').setup(); require('colorizer').attach_to_buffer(0)]]
-    )
+)

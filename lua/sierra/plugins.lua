@@ -83,7 +83,10 @@ packer.startup(function(use)
   use {'nvim-telescope/telescope-file-browser.nvim'}
   
   -- Automation
-  use 'windwp/nvim-autopairs'
+  use {
+    'windwp/nvim-autopairs',
+    module = "nvim-autopairs",
+  }
   use 'windwp/nvim-ts-autotag'
   
   -- Color highlighting

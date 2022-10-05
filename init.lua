@@ -2,6 +2,7 @@ require('sierra.base')
 require('sierra.highlights')
 require('sierra.maps')
 require('sierra.plugins')
+require('sierra.commands')
 
 local has = function(x)
 	return vim.fn.has(x) == 1

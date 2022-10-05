@@ -1,7 +1,7 @@
+-- local status, bl = pcall(require, "bufferline")
+-- if (not status) then return end
 
-local status, bufferline = pcall(require, "bufferline")
-if (not status) then return end
-
+print("loaded bufferline")
 local signs = {
     error = " ",
     warning = " ",
@@ -10,13 +10,13 @@ local signs = {
 }
 
 local severities = {
-  "error",
-  "warning",
-  -- "info",
-  -- "hint",
-}
+    "error",
+    "warning",
+    -- "info",
+    -- "hint",
+  }
 
-bufferline.setup({
+  require("bufferline").setup({
     options = {
       show_close_icon = true,
       diagnostics = "nvim_lsp",

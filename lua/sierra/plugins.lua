@@ -125,7 +125,13 @@ packer.startup(function(use)
   
   use 'stevearc/aerial.nvim'
   
-  use 'numToStr/Comment.nvim'
+  use {
+    'numToStr/Comment.nvim',
+    requires = {
+      "JoosepAlviste/nvim-ts-context-commentstring",
+    },
+    --keys = { "gc", "gcc", "gbc" },
+  }
   
   use {
     'folke/todo-comments.nvim',

@@ -159,4 +159,8 @@ packer.startup(function(use)
     after = 'nvim-treesitter',
     run = ":Neorg sync-parsers",
   }
+  
+  use {
+    'monaqa/dial.nvim',
+  }
 end)

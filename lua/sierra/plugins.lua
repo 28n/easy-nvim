@@ -163,4 +163,7 @@ packer.startup(function(use)
   use {
     'monaqa/dial.nvim',
   }
+  use {
+    'sindrets/diffview.nvim'
+  }
 end)

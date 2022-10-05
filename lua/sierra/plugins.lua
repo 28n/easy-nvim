@@ -101,9 +101,13 @@ packer.startup(function(use)
   use 'windwp/nvim-ts-autotag'
   
   -- Color highlighting
-  use 'norcalli/nvim-colorizer.lua'
-  
+  -- use 'norcalli/nvim-colorizer.lua'
+  use {
+    'NvChad/nvim-colorizer.lua',
+    event = "BufReadPre"
+  }
   -- Zen Mode
+  
   use 'folke/zen-mode.nvim'
   
   -- Bufferline

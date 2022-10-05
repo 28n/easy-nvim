@@ -96,7 +96,10 @@ packer.startup(function(use)
   use 'folke/zen-mode.nvim'
   
   -- Bufferline
-  use 'akinsho/nvim-bufferline.lua'
+  use {
+    'akinsho/nvim-bufferline.lua',
+    event = "BufReadPre"
+  }
   
   -- GIT Integration
   use 'lewis6991/gitsigns.nvim'

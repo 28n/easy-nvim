@@ -2,36 +2,42 @@
 local status, bufferline = pcall(require, "bufferline")
 if (not status) then return end
 
-bufferline.setup({
-  options = {
-    mode = "tabs",
-    separator_style = 'slant',
-    always_show_bufferline = false,
-    show_buffer_close_icons = false,
-    show_close_icon = false,
-    color_icons = true
-  },
-  highlights = {
-    separator = {
-      fg = '#073642',
-      bg = '#002b36',
-    },
-    separator_selected = {
-      fg = '#073642',
-    },
-    background = {
-      fg = '#657b83',
-      bg = '#002b36'
-    },
-    buffer_selected = {
-      fg = '#fdf6e3',
-      bold = true,
-    },
-    fill = {
-      bg = '#073642'
-    }
-  },
-})
+local signs = {
+    error = " ",
+    warning = " ",
+    info = " ",
+    hint = " ",
+}
 
-vim.keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', {})
-vim.keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', {})
+local severities = {
+  "error",
+  "warning",
+  -- "info",
+  -- "hint",
+}
+
+bufferline.setup({
+    options = {
+      show_close_icon = true,
+      diagnostics = "nvim_lsp",
+      always_show_bufferline = false,
+      separator_style = "thick",
+      diagnostics_indicator = function(_, _, diag)
+        local s = {}
+        for _, severity in ipairs(severities) do
+          if diag[severity] then
+            table.insert(s, signs[severity] .. diag[severity])
+          end
+        end
+        return table.concat(s, " ")
+      end,
+      offsets = {
+        {
+          filetype = "neo-tree",
+          text = "Neo Tree",
+          highlight = "Directory",
+          text_align = "left",
+        },
+      },
+    },
+  })

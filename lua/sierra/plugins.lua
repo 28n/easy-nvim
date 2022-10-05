@@ -52,11 +52,13 @@ packer.startup(function(use)
     --}
   --}
   use {
-  'kyazdani42/nvim-tree.lua',
-  requires = {
-    'kyazdani42/nvim-web-devicons', -- optional, for file icons
-  },
-  tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  'nvim-neo-tree/neo-tree.nvim',
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    },
+  cmd = "Neotree",
 }
   
   -- Prettier plugins for Neovims LSP
@@ -85,7 +87,7 @@ packer.startup(function(use)
   -- Automation
   use {
     'windwp/nvim-autopairs',
-    module = "nvim-autopairs",
+    -- module = "nvim-autopairs",
   }
   use 'windwp/nvim-ts-autotag'
   

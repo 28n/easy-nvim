@@ -26,14 +26,22 @@ packer.startup(function(use)
   -- VSCode-lie pictograms
   use 'onsails/lspkind-nvim'
 
-  -- NVIM-CMP source for buffer words
-  use 'hrsh7th/cmp-buffer'
-
-  -- NVIM-CMP source for neovim's built-in LSP
-  use 'hrsh7th/cmp-nvim-lsp'
-
   -- NVIM-Completion
-  use 'hrsh7th/nvim-cmp'
+  use {
+    'hrsh7th/nvim-cmp',
+    event = 'InsertEnter',
+    module = 'cmp',
+    requires = {
+    { "hrsh7th/cmp-nvim-lsp", module = "cmp_nvim_lsp" },
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-emoji",
+    "hrsh7th/cmp-cmdline",
+    "dmitmel/cmp-cmdline-history",
+    "hrsh7th/cmp-path",
+    "saadparwaiz1/cmp_luasnip",
+    "hrsh7th/cmp-nvim-lsp-signature-help",
+  },
+}
 
   -- LSP
   use 'neovim/nvim-lspconfig'

@@ -133,6 +133,13 @@ local leader = {
     d = { "<cmd>DiffviewOpen<cr>", "DiffView" },
     h = { name = "+hunk" },
   },
+  a = {
+    name = "+aerial",
+    t = { "<cmd>AerialToggle<cr>", "Toggle" },
+    n = { "<cmd>AerialNext<cr>", "Next" },
+    p = { "<cmd>AerialPrev<cr>", "Prev" },
+    c = { "<cmd>AerialClose<cr>", "Close" },
+  },
   ["h"] = {
     name = "+help",
     t = { "<cmd>:Telescope builtin<cr>", "Telescope" },

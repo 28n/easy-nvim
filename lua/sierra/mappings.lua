@@ -121,6 +121,12 @@ local leader = {
       end,
       "LazyGit",
     },
+    z = {
+      function ()
+        require("util").float_terminal("cz")
+      end,
+      "Commitizen",
+    },
     c = { "<Cmd>Telescope git_commits<CR>", "commits" },
     b = { "<Cmd>Telescope git_branches<CR>", "branches" },
     s = { "<Cmd>Telescope git_status<CR>", "status" },

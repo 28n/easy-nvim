@@ -176,4 +176,7 @@ packer.startup(function(use)
     "rcarriga/nvim-notify",
     }
   }
+  use {
+    'TimUntersberger/neogit'
+  }
 end)

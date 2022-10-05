@@ -10,6 +10,6 @@ aerial.setup{
     keymap(bufnr, 'n', '<Space>a', ':AerialToggle!<Return>', {silent = true})
     keymap(bufnr, 'n', '<Space>k', ':AerialPrev<Return>', {silent = true})
     keymap(bufnr, 'n', '<Space>j', ':AerialNext<Return>', {silent = true})
-    keymap(bufnr, 'n', '<Space>q', ':AerialClose<Return>', {silent = true})
+    -- keymap(bufnr, 'n', '<Space>q', ':AerialClose<Return>', {silent = true})
   end
 }

@@ -4,6 +4,7 @@ local augend = require("dial.augend")
       augend.integer.alias.decimal,
       augend.integer.alias.hex,
       augend.date.alias["%Y/%m/%d"],
+      augend.date.alias["%d.%m.%Y"],
       augend.constant.alias.bool,
       augend.semver.alias.semver,
     },

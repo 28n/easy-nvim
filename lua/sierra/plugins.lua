@@ -179,4 +179,5 @@ packer.startup(function(use)
   use {
     'TimUntersberger/neogit'
   }
+  use 'projekt0n/github-nvim-theme'
 end)

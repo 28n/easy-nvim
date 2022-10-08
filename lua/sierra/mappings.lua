@@ -195,6 +195,21 @@ local leader = {
     name = "+project",
     p = "Open Project",
     b = { ":Telescope file_browser cwd=~/projects<CR>", "Browse ~/projects" },
+    c = {
+      name = "+create",
+      v = {
+      function ()
+        require("util").float_terminal("pnpm create vite")
+      end,
+      "Create Vite App"
+      },
+      t = {
+        function ()
+          require("util").float_terminal("pnpm create t3-app")
+        end,
+        "Create T3 App"
+      },
+    },
   },
   t = {
     name = "toggle",

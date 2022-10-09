@@ -122,7 +122,7 @@ nvim_lsp.tailwindcss.setup {
   capabilities = capabilities,
 }
 
-nvim_lsp.emmet_ls.setup({
+--[[ nvim_lsp.emmet_ls.setup({
     on_attach = on_attach,
     capabilities = capabilities,
     filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
@@ -134,7 +134,7 @@ nvim_lsp.emmet_ls.setup({
         },
       },
     }
-})
+}) ]]
 
 nvim_lsp.vuels.setup {
   on_attach = on_attach,

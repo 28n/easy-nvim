@@ -179,7 +179,7 @@ packer.startup(function(use)
   use {
     'TimUntersberger/neogit'
   }
-  use 'projekt0n/github-nvim-theme'
+
 
   -- use 'ellisonleao/glow.nvim'
 
@@ -191,4 +191,6 @@ packer.startup(function(use)
     'nvim-telescope/telescope.nvim',
   },
 }
+
+  use 'folke/tokyonight.nvim'
 end)

@@ -180,4 +180,15 @@ packer.startup(function(use)
     'TimUntersberger/neogit'
   }
   use 'projekt0n/github-nvim-theme'
+
+  -- use 'ellisonleao/glow.nvim'
+
+  use {
+  'rlch/github-notifications.nvim',
+  config = [[require('config.github-notifications')]],
+  requires = {
+    'nvim-lua/plenary.nvim',
+    'nvim-telescope/telescope.nvim',
+  },
+}
 end)

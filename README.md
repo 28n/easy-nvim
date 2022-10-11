@@ -39,3 +39,21 @@ You will be presented by a lot of errors. To resolve them, run the following com
 :PackerInstall
 ```
 
+# How to setup secrets.lua
+
+Firstly, navigate to the subfolder `./lua/`. Then, create a file named `secrets.lua`.
+
+For the file to work, you'll first need to create an API Token on Github [here](https://github.com/settings/tokens).
+
+Note that you will only need to select the `Notifications` scope. The other permissions are not needed. Another Tip is to make the Token not expire. The token is securely stored on your own machine and not imported into the Git Repository.
+
+Then, add the following sourcecode to the file:
+
+```lua
+local  M = {}
+
+M.username = "<YOUR_GITHUB_USERNAME>"
+M.token = "<YOUR_GITHUB_TOKEN>"
+
+return M
+```

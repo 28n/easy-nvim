@@ -232,7 +232,7 @@ local leader = {
     n = {
       function()
         util.toggle("relativenumber", true)
-        util.toggle("number")
+        -- util.toggle("number")
       end,
       "Line Numbers",
     },

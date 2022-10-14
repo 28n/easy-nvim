@@ -1,3 +1,5 @@
+local packagemanager = "pnpm"
+
 local status, wk = pcall(require, "which-key")
 if not status then
   return
@@ -195,6 +197,14 @@ local leader = {
     name = "+project",
     p = "Open Project",
     b = { ":Telescope file_browser cwd=~/projects<CR>", "Browse ~/projects" },
+    m = {
+      name = "+packagemanager",
+      i = { "<cmd>lua require('util').float_terminal('pnpm i')<cr>", "Install" },
+      r = {
+        name = "+run",
+        s = { "<cmd>lua require('util').float_terminal('pnpm run start')<cr>", "Start" },
+      }
+    },
     c = {
       name = "+create",
       v = {

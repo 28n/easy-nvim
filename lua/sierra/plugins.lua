@@ -67,7 +67,6 @@ packer.startup(function(use)
       "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
       "MunifTanjim/nui.nvim",
     },
-  cmd = "Neotree",
 }
   
   -- Prettier plugins for Neovims LSP
@@ -153,14 +152,6 @@ packer.startup(function(use)
   use 'kartikp10/noctis.nvim'
 
   use {
-    'nvim-neorg/neorg',
-    requires = 'nvim-lua/plenary.nvim',
-    ft = 'norg',
-    after = 'nvim-treesitter',
-    run = ":Neorg sync-parsers",
-  }
-  
-  use {
     'monaqa/dial.nvim',
   }
   use {
@@ -185,7 +176,6 @@ packer.startup(function(use)
 
   use {
   'rlch/github-notifications.nvim',
-  config = [[require('config.github-notifications')]],
   requires = {
     'nvim-lua/plenary.nvim',
     'nvim-telescope/telescope.nvim',

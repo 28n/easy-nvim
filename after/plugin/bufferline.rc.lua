@@ -33,8 +33,8 @@ local severities = {
       end,
       offsets = {
         {
-          filetype = "neo-tree",
-          text = "Neo Tree",
+          filetype = "NvimTree",
+          text = "NvimTree",
           highlight = "Directory",
           text_align = "left",
         },

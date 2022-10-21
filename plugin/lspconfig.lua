@@ -173,6 +173,14 @@ nvim_lsp.tailwindcss.setup {
   capabilities = capabilities,
 }
 
+nvim_lsp.ltex.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  -- cmd = {"ltex-ls"},
+  filetypes = { "bib", "gitcommit", "markdown", "org", "plaintex", "rst", "rnoweb", "tex"},
+  single_file_support = true,
+}
+
 --[[ nvim_lsp.emmet_ls.setup({
     on_attach = on_attach,
     capabilities = capabilities,

@@ -182,4 +182,6 @@ packer.startup(function(use)
     requires = 'kyazdani42/nvim-web-devicons',
     tag = 'nightly'
   }
+
+  use 'lervag/vimtex'
 end)

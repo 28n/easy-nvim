@@ -4,9 +4,6 @@ if not status then
   return
 end
 
-g.nvim_tree_icons = {
-}
-
 nvimtree.setup({
   renderer = {
     highlight_git = true,

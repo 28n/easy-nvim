@@ -43,6 +43,7 @@ packer.startup(function(use)
     "hrsh7th/cmp-nvim-lsp-signature-help",
   },
 }
+  use 'ms-jpq/coq_nvim'
 
   -- LSP
   use 'neovim/nvim-lspconfig'

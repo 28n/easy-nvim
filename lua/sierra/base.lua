@@ -1,4 +1,5 @@
 vim.cmd("autocmd!")
+vim.g.python3_host_prog = "C:/Users/weedy/AppData/Local/Microsoft/WindowsApps/python3.exe"
 
 vim.g.mapleader = " "
 vim.g.localleader = ","

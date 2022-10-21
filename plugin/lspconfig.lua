@@ -54,6 +54,57 @@ protocol.CompletionItemKind = {
   '', -- TypeParameter
 }
 
+---@type lspconfig.options
+local servers = {
+  flow = {
+    on_attach = on_attach,
+  },
+  tsserver = {
+    on_attach = on_attach,
+    filetypes = {"typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx"},
+  },
+  graphql = {
+    on_attach = on_attach,
+    filetypes = {"graphql", "graphql.ts", "graphql.tsx"},
+    root_dir = nvim_lsp.util.root_pattern("package.json", ".git"),
+  },
+  prismals = {
+    on_attach = on_attach,
+    filetypes = {"prisma"},
+    root_dir = nvim_lsp.util.root_pattern("package.json", ".git"),
+    settings = {
+      prisma = {
+        prismaFmtBinPath = ""
+      }
+    }
+  },
+  sourcekit = {
+    on_attach = on_attach,
+  },
+  sumneko_lua = {
+    on_attach = on_attach,
+    cmd = {"lua-language-server"},
+    settings = {
+      Lua = {
+        diagnostics = {
+          globals = {"vim"}
+        },
+        workspace = {
+          library = vim.api.nvim_get_runtime_file("", true),
+          checkThirdParty = false,
+        }
+      }
+    }
+  },
+  tailwindcss = {
+    on_attach = on_attach
+  },
+  vuels = {
+    on_attach = on_attach,
+    filetypes = {"vue"},
+    }
+}
+
 -- Set up completion using nvim_cmp with LSP source
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
@@ -98,7 +149,7 @@ nvim_lsp.sourcekit.setup {
   on_attach = on_attach,
 }
 
-nvim_lsp.sumneko_lua.setup {
+nvim_lsp.sumneko_lua.setup ({
   on_attach = on_attach,
   cmd = {"lua-language-server"},
   settings = {
@@ -115,7 +166,7 @@ nvim_lsp.sumneko_lua.setup {
       },
     },
   },
-}
+})
 
 nvim_lsp.tailwindcss.setup {
   on_attach = on_attach,
@@ -179,7 +230,17 @@ nvim_lsp.vuels.setup {
     }
   }
 }
+
 }
+
+--[[ for server, opts in pairs(servers) do
+  opts = vim.tbl_deep_extend("force", {}, options, opts or {})
+  if server == "tsserver" then
+    require("typescript").setup({server = opts})
+  else
+    nvim_lsp.setup[server].setup(opts)
+  end
+end ]]
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {

@@ -1,5 +1,6 @@
 local keymap = vim.keymap
 vim.g.mapleader = "<Space>"
+vim.g.localleader = ","
 local silent = {silent = true}
 --TODO: clean up everything and all else!
 

@@ -5,6 +5,9 @@ local lspkind = require 'lspkind'
 vim.o.completeopt = "menuone,noselect"
 
 cmp.setup({
+  view = {
+    entries = "custom"
+  },
     completion = {
       completeopt = "menu,menuone,noinsert",
     },

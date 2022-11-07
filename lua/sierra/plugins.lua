@@ -111,7 +111,7 @@ packer.startup(function(use)
   --TODO: Add docs for plugins
   use 'github/copilot.vim'
   
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+  -- use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
   
   use 'folke/trouble.nvim'
   

@@ -184,4 +184,6 @@ packer.startup(function(use)
   }
 
   use 'lervag/vimtex'
+  
+    use 'ggandor/lightspeed.nvim'
 end)

@@ -186,4 +186,19 @@ packer.startup(function(use)
   use 'lervag/vimtex'
   
     use 'ggandor/lightspeed.nvim'
+  use {
+    'SmiteshP/nvim-navic',
+    config = function ()
+      vim.g.navic_silence = true
+      require("nvim-navic").setup({separator = " ", hightlight = true, depth_limit = 5})
+    end
+  }
+
+  use {
+    'b0o/SchemaStore.nvim'
+  }
+
+  use {
+    'jose-elias-alvarez/typescript.nvim'
+  }
 end)
